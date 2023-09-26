@@ -34,4 +34,15 @@ print('\n ----> practiquemos la tabla del ', tabla_x ,'... \n')
 correctas = 0
 aleatorios = random.sample(range(1, 11),10) #Generación de números aleatorios    
 juego(tabla_x, correctas, aleatorios)
-print('\n ... Fin del juego ...\n')
+
+seguir = str(input('quieres seguir jugando? s=si n=no --> :'))
+if seguir == "s":
+    print ("   ")
+    print("*** Bienvenido al juego de las tablas de Multiplicar ***", '\n\n')
+    tabla_x = int(input('Ingresa el numero de la tabla que quieres practicar: '))
+    print('\n ----> practiquemos la tabla del ', tabla_x ,'... \n')
+    correctas = 0
+    aleatorios = random.sample(range(1, 11),10) #Generación de números aleatorios    
+    juego(tabla_x, correctas, aleatorios)
+else:
+    print('\n ... Fin del juego ...\n')
